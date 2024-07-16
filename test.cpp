@@ -64,6 +64,12 @@ class Strategy{
     }
 };
 
+enum SplitType{
+    EQUAL,
+    UNEQUAL,
+    PERCENT
+}; 
+
 int main(){
     // Base *b = new Base();
     // Base b1;
@@ -74,24 +80,32 @@ int main(){
     // d->func();
     // bd->func();
 
-    Derived1 *d = nullptr;
-    if(d==nullptr)
-        cout<<"Value is null"<<endl;
-    else cout<<"some value"<<endl;
+    // Derived1 *d = nullptr;
+    // if(d==nullptr)
+    //     cout<<"Value is null"<<endl;
+    // else cout<<"some value"<<endl;
 
-    cout<<d<<endl;
+    // cout<<d<<endl;
 
-    Strategy *s = new Strategy(new Derived2());
-    s->display();
+    // Strategy *s = new Strategy(new Derived2());
+    // s->display();
 
-    int max=6;
-    int min=1;
-    srand(time(0));
+    // int max=6;
+    // int min=1;
+    // srand(time(0));
 
-    for(int i=0;i<10;i++){
+    // for(int i=0;i<10;i++){
         
-        int num = min + (rand()%(max-min+1));
-        cout<<num<<endl;
+    //     int num = min + (rand()%(max-min+1));
+    //     cout<<num<<endl;
+    // }
+
+    SplitType t = UNEQUAL;
+    cout<<t<<endl;
+
+    for(int i=0;i<26;i++){
+        cout<<i<<" - ";
+        cout<<ceil((float)i/9.0)<<endl;
     }
     
     return 0;
